@@ -19,7 +19,7 @@ response  =  Ec2Client.run_instances(
     SecurityGroups = [
         'allow-all-traffic'
     ],
-    InstanceType = 't2.micro',
+    InstanceType = 't2.nano',
     Placement = {
         'AvailabilityZone': 'us-east-1a',
         'Tenancy': 'default'
