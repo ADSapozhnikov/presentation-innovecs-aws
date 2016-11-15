@@ -4,7 +4,7 @@ import argparse
 import boto3
 
 parser = argparse.ArgumentParser(description = 'Description')
-parser.add_argument('-p', '--aws-profile', dest = 'AwsProfile')
+parser.add_argument('-p', '--aws-profile', dest = 'AwsProfile', default = 'demo')
 parser.add_argument('-r', '--aws-region', dest = 'AwsRegion', default = 'us-east-1')
 args = parser.parse_args()
 
@@ -15,7 +15,7 @@ response  =  Ec2Client.run_instances(
     ImageId = 'ami-29f96d3e',
     MinCount = 1,
     MaxCount = 1,
-    KeyName = 'aws-alex-test',
+    KeyName = 'aws-personal-demo-us-east-1',
     SecurityGroups = [
         'allow-all-traffic'
     ],
