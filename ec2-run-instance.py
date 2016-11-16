@@ -16,9 +16,7 @@ response  =  Ec2Client.run_instances(
     MinCount = 1,
     MaxCount = 1,
     KeyName = 'aws-personal-demo-us-east-1',
-    SecurityGroups = [
-        'allow-all-traffic'
-    ],
+    SecurityGroups = ['allow-all-traffic'],
     InstanceType = 't2.nano',
     Placement = {
         'AvailabilityZone': 'us-east-1a',
